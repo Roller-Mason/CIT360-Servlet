@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Mason
  */
-@WebServlet(name = "HelloWorld", urlPatterns = {"/Hello"})
+@WebServlet(name = "PlanogramSwap", urlPatterns = {"/PlanogramSwap"})
 public class MyServlet extends HttpServlet {
 
     /**
@@ -36,11 +36,11 @@ public class MyServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet MyServlet</title>");            
+            out.println("<title>Swapping Planograms</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet MyServlet at " + request.getContextPath() + "</h1>");
-            out.println("<h2>Hello World!</h2>");
+            out.println("Swapping out planogram: " + request.getParameter("oldPlanogram") + "<br/>");
+            out.println("For the new planogram: " + request.getParameter("newPlanogram"));
             out.println("</body>");
             out.println("</html>");
         }
